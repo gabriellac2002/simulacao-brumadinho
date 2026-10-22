@@ -1,0 +1,61 @@
+<section id="pressure-profile-chart" aria-labelledby="pressure-profile-title">
+  <h2 id="pressure-profile-title">Pressão média SPH junto à comporta</h2>
+  <p class="text-muted">t = 0,083999 s · ponto: média de 5 partículas · traço: faixa entre partículas</p>
+  <div id="pressure-profile-plot" role="img" aria-label="Perfil vertical de pressão média física em quatro alturas junto à comporta"></div>
+</section>
+<style>
+  #pressure-profile-chart { max-width: 736px; }
+  #pressure-profile-chart h2 { margin: 0; }
+  #pressure-profile-chart p { margin: 0.25rem 0 0.5rem; }
+  #pressure-profile-plot svg { display: block; width: 100%; }
+  #pressure-profile-plot .axis path, #pressure-profile-plot .axis line, #pressure-profile-plot .grid line, #pressure-profile-plot rect[data-chart-frame] { stroke: var(--border); }
+  #pressure-profile-plot .grid line { stroke-opacity: .65; }
+  #pressure-profile-plot .axis text, #pressure-profile-plot .axis-title, #pressure-profile-plot .value-label { fill: var(--foreground); font-size: 12px; }
+  #pressure-profile-plot .range, #pressure-profile-plot .mean-line, #pressure-profile-plot .mean-point { stroke: var(--viz-series-1); fill: var(--viz-series-1); }
+  #pressure-profile-plot .range { stroke-width: 3px; stroke-opacity: .55; }
+  #pressure-profile-plot .mean-line { fill: none; stroke-width: 2px; }
+  #pressure-profile-plot .mean-point { stroke: var(--background); stroke-width: 2px; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script>
+  const root = document.getElementById('pressure-profile-chart');
+  const host = document.getElementById('pressure-profile-plot');
+  const data = [
+    { height: 0.015, mean: 135.0, low: 18.0, high: 471.4 },
+    { height: 0.045, mean: 205.7, low: 86.4, high: 334.6 },
+    { height: 0.075, mean: 48.7, low: 25.7, high: 65.4 },
+    { height: 0.105, mean: 10.3, low: 1.1, high: 15.1 }
+  ];
+  function draw() {
+    const width = Math.max(320, host.clientWidth || 736);
+    const height = 410;
+    const margin = { top: 18, right: 72, bottom: 60, left: 76 };
+    const innerWidth = width - margin.left - margin.right;
+    const innerHeight = height - margin.top - margin.bottom;
+    host.replaceChildren();
+    const svg = d3.select(host).append('svg').attr('viewBox', `0 0 ${width} ${height}`).attr('aria-labelledby', 'pressure-profile-title');
+    svg.append('title').text('Pressão física média e faixa entre cinco partículas SPH, em função da altura');
+    svg.append('desc').text('A pressão física é calculada como o negativo da tensão média. Barras horizontais indicam o mínimo e máximo das cinco partículas.');
+    const allPressure = data.flatMap(d => [d.low, d.high]);
+    const [xMin, xMax] = d3.extent(allPressure);
+    const xPad = Math.max(20, (xMax - xMin) * 0.08);
+    const [yMin, yMax] = d3.extent(data, d => d.height);
+    const yPad = (yMax - yMin) * 0.12;
+    const x = d3.scaleLinear().domain([Math.max(0, xMin - xPad), xMax + xPad]).range([margin.left, margin.left + innerWidth]);
+    const y = d3.scaleLinear().domain([Math.max(0, yMin - yPad), yMax + yPad]).range([margin.top + innerHeight, margin.top]);
+    svg.append('rect').attr('data-chart-frame', '').attr('x', margin.left).attr('y', margin.top).attr('width', innerWidth).attr('height', innerHeight).attr('fill', 'none');
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(0,${margin.top + innerHeight})`).call(d3.axisBottom(x).ticks(width < 500 ? 4 : 6).tickSize(-innerHeight).tickFormat(''));
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${margin.left},0)`).call(d3.axisLeft(y).ticks(5).tickSize(-innerWidth).tickFormat(''));
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${margin.top + innerHeight})`).call(d3.axisBottom(x).ticks(width < 500 ? 4 : 6));
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(${margin.left},0)`).call(d3.axisLeft(y).ticks(5));
+    const g = svg.append('g');
+    g.selectAll('.range').data(data).join('line').attr('class', 'range').attr('x1', d => x(d.low)).attr('x2', d => x(d.high)).attr('y1', d => y(d.height)).attr('y2', d => y(d.height));
+    g.append('path').datum(data).attr('class', 'mean-line').attr('d', d3.line().x(d => x(d.mean)).y(d => y(d.height)));
+    g.selectAll('.mean-point').data(data).join('circle').attr('class', 'mean-point').attr('cx', d => x(d.mean)).attr('cy', d => y(d.height)).attr('r', 5).attr('data-tooltip', d => `y = ${d.height.toFixed(3)} m: média ${d.mean.toFixed(1)} Pa; faixa ${d.low.toFixed(1)}–${d.high.toFixed(1)} Pa`);
+    g.selectAll('.value-label').data(data).join('text').attr('class', 'value-label').attr('x', d => x(d.mean) + 8).attr('y', d => y(d.height) - 8).text(d => `${d.mean.toFixed(1)} Pa`);
+    svg.append('text').attr('class', 'axis-title').attr('data-axis', 'x').attr('x', margin.left + innerWidth / 2).attr('y', height - 12).attr('text-anchor', 'middle').text('Pressão física média (Pa)');
+    svg.append('text').attr('class', 'axis-title').attr('data-axis', 'y').attr('transform', `translate(18,${margin.top + innerHeight / 2}) rotate(-90)`).attr('text-anchor', 'middle').text('Altura junto à comporta, y (m)');
+  }
+  new ResizeObserver(draw).observe(root);
+  draw();
+</script>

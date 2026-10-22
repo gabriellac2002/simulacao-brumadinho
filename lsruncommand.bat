@@ -1,0 +1,1 @@
+"C:\Program Files\LS-DYNA Suite R16.1 Student\lsdyna\ls-dyna_smp_d_R16.1_180-gd50332dbe5_winx64_ifort190_sse2_studentversion.exe" i=C:\Users\gabri\Downloads\DAM5_3D_5cm_refinedZ_test\i_3D_sph_gate_pressure.k ncpu=4 memory=100m > lsrun.out.txt 2>&1

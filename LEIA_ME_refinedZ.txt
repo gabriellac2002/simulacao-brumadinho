@@ -1,0 +1,16 @@
+DAM5 3D - teste com malha estrutural refinada na profundidade
+
+Profundidade total: 0.05 m
+Malha anterior: 5 elementos na profundidade (dz = 0.01 m)
+Nova malha: 10 elementos na profundidade (dz = 0.005 m)
+Elementos sólidos estruturais: 8150
+Nós estruturais: 10824
+
+Também mantidas as correções anteriores:
+- keyword *MAT_MOONEY-RIVLIN_RUBBER corrigido
+- repetição acidental do PID 18 removida
+
+IMPORTANTE:
+O log anterior terminou abruptamente sem registrar um erro fatal. Portanto, não é possível
+afirmar que o aspect ratio foi a causa da terminação. Esta versão é um teste de refinamento,
+não uma correção comprovada da causa do encerramento.

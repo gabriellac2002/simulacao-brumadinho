@@ -1,0 +1,385 @@
+
+
+ ***************************************************************
+ *            ANSYS LEGAL NOTICES                              *
+ ***************************************************************
+ *                                                             *
+ * Copyright 1971-2025 ANSYS, Inc.  All rights reserved.       *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of ANSYS, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the ANSYS, Inc. online documentation or the ANSYS, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * ANSYS, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * ANSYS, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the ANSYS, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the ANSYS, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+      Date: 10/15/2026      Time: 22:20:11  
+      ___________________________________________________ 
+     |                                                   |
+     |  LS-DYNA, A Program for Nonlinear Dynamic         |
+     |  Analysis of Structures in Three Dimensions       |
+     |  Date    : 07/09/2025    Time: 09:53:35           |
+     |  Version : smp d R16                              |
+     |  Revision: R16.1-180-gd50332dbe5                  |
+     |  AnLicVer: 2026 R1 (20251230+dl-79-g6933d52)      |
+     |                                                   |
+     |  Features enabled in this version:                |
+     |    Shared Memory Parallel                         |
+     |    CESE CHEMISTRY EM ICFD STOCHASTIC_PARTICLES    |
+     |    FFTW (multi-dimensional FFTW Library)          |
+     |    ARPACK (nonsymmetric eigensolver library)      |
+     |    ANSYSLIC enabled                               |
+     |  Issued by  : ANSYS                               |
+     |                                                   |
+     |  Platform   : WINDOWS X64                         |
+     |  OS Level   : Windows 10  (Build 26200) uam       |
+     |  Compiler   : Intel Fortran Compiler 19.0 SSE2    |
+     |  Hostname   : Gabi                                |
+     |  Precision  : Double precision (I8R8)             |
+     |                                                   |
+     |  Unauthorized use infringes Ansys Inc. copyrights |
+     |___________________________________________________|
+
+
+ Command line options: i=C:\Users\gabri\Downloads\DAM5_3D_5cm_refinedZ_test\i_3D_sph_gate_pressure.k 
+                       ncpu=4 
+                       memory=100m
+
+ Input file: C:\Users\gabri\Downloads\DAM5_3D_5cm_refinedZ_test\i_3D_sph_gate_pressure.k     
+
+ The native file format       : 64-bit small endian
+ Memory size from command line:   100000000
+ allocating  memory to   100000000 d     1984109 Initial allocation
+
+ ********  notice  ********  notice  ********  notice  ********
+ *                                                            *
+ * This is the LS-DYNA Finite Element code.                   *
+ *                                                            *
+ * Neither LST nor the authors assume any responsibility for  *
+ * the validity, accuracy, or applicability of any results    *
+ * obtained from this system. Users must verify their own     *
+ * results.                                                   *
+ *                                                            *
+ * LST endeavors to make the LS-DYNA code as complete,        *
+ * accurate and easy to use as possible.                      *
+ * Suggestions and comments are welcomed.  Please report any  *
+ * errors encountered in either the documentation or results  *
+ * immediately to LST through your site focus.                *
+ *                                                            *
+ * Copyright (C) 1990-2021                                    *
+ * by Livermore Software Technology, LLC                      *
+ * All rights reserved                                        *
+ *                                                            *
+ ********  notice  ********  notice  ********  notice  ********
+
+ Beginning of keyword reader                                   10/15/26 22:20:11
+ expanding   memory to       30650 d     2278672  
+ expanding   memory to       60650 d     2278672  
+ expanding   memory to       82268 d     2355736  
+ expanding   memory to      111700 d     2428984  
+ expanding   memory to      173724 d     2443984  
+ expanding   memory to      199276 d     2445064  
+
+                                                               10/15/26 22:20:11
+ Open include file: mesh_struc_3D_refinedZ.k
+
+                                                               10/15/26 22:20:11
+ Open include file: mesh_sph_container_3d.k
+
+                                                               10/15/26 22:20:11
+ Open include file: water_sph_volume.k
+ expanding   memory to      222198 d     2624780  
+ expanding   memory to      246066 d     2771502  
+ expanding   memory to      271212 d     2793334  
+
+ Memory required to process keyword     :     271212  
+ Additional dynamic memory required     :    2833050  
+
+ contracting memory to           1 d     2624857 end of keyword reader
+
+ LS-DYNA will perform a structural only analysis 
+
+ DAM5 3D structural gate - 10 elements through 0.05 m depth              
+                    ls-dyna smp d R16 R16.1_180_d50332d date 07/09/2025
+ expanding   memory to        2001 d     1985746 material, node and element data
+ expanding   memory to        2071 d     1985809 material properties
+ expanding   memory to        2111 d     2090240 element data for composite material
+ expanding   memory to        2125 d     2882162 gradient of damage data
+ expanding   memory to        2146 d     3010201 user control for contact interfaces
+ contracting memory to        2126 d     3010204 thermal expansion 0
+ expanding   memory to        2128 d     3010207 cross-sectional force definitions 0
+ expanding   memory to       15796 d     3010252 temp index array for node sorting
+ contracting memory to        2128 d     3023924 just because?
+ expanding   memory to       10278 d     3051279 arbitrary element numbering input
+ contracting memory to        2148 d     3113121 spc cards
+ contracting memory to        2144 d     3257988 user_define_loading_set
+ expanding   memory to        2157 d     3257988 load curve regularization
+ expanding   memory to        2161 d     3258188 *DEFINE_ELEMENT_DEATH
+ expanding   memory to       30497 d     3329566 implicit contact 1
+ expanding   memory to       95699 d     3329566 implicit contact 2
+ contracting memory to        3161 d     3525768 contact segment data 1
+ expanding   memory to      109365 d     3677280 contact segment data 3
+ contracting memory to        2161 d     3978409 contact definition
+ expanding   memory to        2192 d     4013348 contact friction
+ expanding   memory to       98204 d     4013393 joints
+ expanding   memory to       98304 d     4277150 rigid bodies for disp. termination
+ expanding   memory to       98437 d     3842545 save d3plot control data
+
+
+ The following data is also written to file: curveplot_1           
+
+Curveplot
+Fit to Mooney-Rivlin material ID            1
+extension
+force
+Legend
+experimental  #pts=           9
+    0.1000E+01      0.0000E+00
+    0.1001E+01      0.1000E+05
+    0.1004E+01      0.5692E+05
+    0.1009E+01      0.8681E+05
+    0.1020E+01      0.1357E+06
+    0.1039E+01      0.2173E+06
+    0.1079E+01      0.3504E+06
+    0.1200E+01      0.6521E+06
+    0.1403E+01      0.1005E+07
+endcurve
+best fit  #pts=           9
+    0.1000E+01      0.0000E+00
+    0.1001E+01      0.5140E+04
+    0.1004E+01      0.2020E+05
+    0.1009E+01      0.4495E+05
+    0.1020E+01      0.9753E+05
+    0.1039E+01      0.1826E+06
+    0.1079E+01      0.3443E+06
+    0.1200E+01      0.6896E+06
+    0.1403E+01      0.9944E+06
+endcurve
+
+ initial kinetic energy = 0.00000000E+00
+
+     surfa surface of interface   = 1
+     type                         =       a 5
+     surface timestep             = 3.227E-04
+     controlling surfa node ID    = 20001
+     part ID of surfa node        = 0
+     current minimum time step    = 3.227E-04
+
+     surfb surface of interface   = 1
+     type                         =       a 5
+     surface timestep             = 2.834E-06
+     controlling surfb node ID    = 967
+     part ID of surfb node        = 1
+     current minimum time step    = 2.834E-06
+
+     surfa surface of interface   = 2
+     type                         =       a 5
+     surface timestep             = 3.227E-04
+     controlling surfa node ID    = 20001
+     part ID of surfa node        = 0
+     current minimum time step    = 2.834E-06
+
+     surfb surface of interface   = 2
+     type                         =       a 5
+     surface timestep             = 2.803E-05
+     controlling surfb node ID    = 30009
+     part ID of surfb node        = 20
+     current minimum time step    = 2.834E-06
+
+ The LS-DYNA time step size should not exceed     2.834E-06
+ to avoid contact instabilities.  If the step size is
+ bigger then scale the penalty of the offending surface.
+
+ S t o r a g e   a l l o c a t i o n   
+
+ Memory required to begin solution      :     272K
+ Additional dynamically allocated memory:    4346K
+                                   Total:    4617K
+ 
+ *** Warning 41123 (SOL+1123)
+     SPH in bucket sort of particles time 0.0000E+00
+     Increasing memory for buckets
+     Old : 1038 New : 2076
+       1 t 0.0000E+00 dt 1.03E-06 flush i/o buffers            10/15/26 22:20:11
+       1 t 0.0000E+00 dt 1.03E-06 write d3plot file            10/15/26 22:20:11
+    4853 t 4.9994E-03 dt 1.03E-06 write d3plot file            10/15/26 22:20:40
+    5000 t 5.1509E-03 dt 1.03E-06 flush i/o buffers            10/15/26 22:20:41
+    9706 t 9.9999E-03 dt 1.03E-06 write d3plot file            10/15/26 22:20:56
+   10000 t 1.0303E-02 dt 1.03E-06 flush i/o buffers            10/15/26 22:20:57
+   14558 t 1.4999E-02 dt 1.03E-06 write d3plot file            10/15/26 22:21:11
+   15000 t 1.5455E-02 dt 1.03E-06 flush i/o buffers            10/15/26 22:21:13
+   19411 t 2.0000E-02 dt 1.03E-06 write d3plot file            10/15/26 22:21:27
+   20000 t 2.0607E-02 dt 1.03E-06 flush i/o buffers            10/15/26 22:21:29
+   24263 t 2.4999E-02 dt 1.03E-06 write d3plot file            10/15/26 22:21:43
+   25000 t 2.5759E-02 dt 1.03E-06 flush i/o buffers            10/15/26 22:21:45
+   29116 t 3.0000E-02 dt 1.03E-06 write d3plot file            10/15/26 22:21:59
+   30000 t 3.0911E-02 dt 1.03E-06 flush i/o buffers            10/15/26 22:22:02
+   33968 t 3.4999E-02 dt 1.03E-06 write d3plot file            10/15/26 22:22:21
+   35000 t 3.6061E-02 dt 1.03E-06 flush i/o buffers            10/15/26 22:22:28
+   38854 t 3.9999E-02 dt 1.01E-06 write d3plot file            10/15/26 22:22:54
+   40000 t 4.1167E-02 dt 1.02E-06 flush i/o buffers            10/15/26 22:23:02
+   43774 t 4.5000E-02 dt 1.02E-06 write d3plot file            10/15/26 22:23:28
+   45000 t 4.6254E-02 dt 1.02E-06 flush i/o buffers            10/15/26 22:23:36
+   48657 t 4.9999E-02 dt 1.03E-06 write d3plot file            10/15/26 22:23:51
+   50000 t 5.1372E-02 dt 1.01E-06 flush i/o buffers            10/15/26 22:23:55
+   53566 t 5.5000E-02 dt 9.99E-07 write d3plot file            10/15/26 22:24:07
+   55000 t 5.6450E-02 dt 1.02E-06 flush i/o buffers            10/15/26 22:24:12
+   58486 t 5.9999E-02 dt 1.02E-06 write d3plot file            10/15/26 22:24:32
+   60000 t 6.1540E-02 dt 1.02E-06 flush i/o buffers            10/15/26 22:24:42
+   63389 t 6.5000E-02 dt 1.02E-06 write d3plot file            10/15/26 22:25:01
+   65000 t 6.6644E-02 dt 1.00E-06 flush i/o buffers            10/15/26 22:25:06
+   68324 t 7.0000E-02 dt 1.02E-06 write d3plot file            10/15/26 22:25:17
+   70000 t 7.1705E-02 dt 1.02E-06 flush i/o buffers            10/15/26 22:25:23
+   73235 t 7.4999E-02 dt 1.02E-06 write d3plot file            10/15/26 22:25:33
+   75000 t 7.6798E-02 dt 1.02E-06 flush i/o buffers            10/15/26 22:25:39
+   78138 t 7.9999E-02 dt 1.02E-06 write d3plot file            10/15/26 22:25:50
+   80000 t 8.1905E-02 dt 1.02E-06 flush i/o buffers            10/15/26 22:25:57
+   83038 t 8.5000E-02 dt 1.02E-06 write d3plot file            10/15/26 22:26:07
+   85000 t 8.7003E-02 dt 1.02E-06 flush i/o buffers            10/15/26 22:26:14
+   87931 t 8.9999E-02 dt 1.02E-06 write d3plot file            10/15/26 22:26:24
+   90000 t 9.2112E-02 dt 1.02E-06 flush i/o buffers            10/15/26 22:26:31
+   92830 t 9.5000E-02 dt 1.02E-06 write d3plot file            10/15/26 22:26:41
+   95000 t 9.7215E-02 dt 1.02E-06 flush i/o buffers            10/15/26 22:26:48
+   97735 t 1.0000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:26:58
+  100000 t 1.0231E-01 dt 1.01E-06 flush i/o buffers            10/15/26 22:27:05
+  102633 t 1.0500E-01 dt 1.01E-06 write d3plot file            10/15/26 22:27:14
+  105000 t 1.0741E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:27:23
+  107536 t 1.1000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:27:31
+  110000 t 1.1252E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:27:40
+  112427 t 1.1500E-01 dt 1.02E-06 write d3plot file            10/15/26 22:27:49
+  115000 t 1.1763E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:27:58
+  117310 t 1.2000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:28:06
+  120000 t 1.2276E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:28:16
+  122190 t 1.2500E-01 dt 1.02E-06 write d3plot file            10/15/26 22:28:25
+  125000 t 1.2788E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:28:36
+  127076 t 1.3000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:28:44
+  130000 t 1.3298E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:28:56
+  131969 t 1.3500E-01 dt 1.02E-06 write d3plot file            10/15/26 22:29:04
+  135000 t 1.3810E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:29:17
+  136863 t 1.4000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:29:25
+  140000 t 1.4321E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:29:38
+  141755 t 1.4500E-01 dt 1.02E-06 write d3plot file            10/15/26 22:29:45
+  145000 t 1.4832E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:29:58
+  146642 t 1.5000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:30:05
+  150000 t 1.5344E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:30:19
+  151529 t 1.5500E-01 dt 1.02E-06 write d3plot file            10/15/26 22:30:25
+  155000 t 1.5855E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:30:39
+  156421 t 1.6000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:30:45
+  160000 t 1.6366E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:30:59
+  161309 t 1.6500E-01 dt 1.02E-06 write d3plot file            10/15/26 22:31:05
+  165000 t 1.6877E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:31:19
+  166198 t 1.7000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:31:24
+  170000 t 1.7389E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:31:39
+  171084 t 1.7500E-01 dt 1.02E-06 write d3plot file            10/15/26 22:31:44
+  175000 t 1.7900E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:32:00
+  175976 t 1.8000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:32:03
+  180000 t 1.8410E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:32:20
+  180884 t 1.8500E-01 dt 1.02E-06 write d3plot file            10/15/26 22:32:23
+  185000 t 1.8920E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:32:40
+  185783 t 1.9000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:32:43
+  190000 t 1.9431E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:32:59
+  190675 t 1.9500E-01 dt 1.02E-06 write d3plot file            10/15/26 22:33:01
+  195000 t 1.9942E-01 dt 1.02E-06 flush i/o buffers            10/15/26 22:33:18
+  195569 t 2.0000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:33:20
+ 
+ *** termination time reached ***
+  195569 t 2.0000E-01 dt 1.02E-06 write d3dump01 file          10/15/26 22:33:20
+  195569 t 2.0000E-01 dt 1.02E-06 write d3plot file            10/15/26 22:33:20
+
+ N o r m a l    t e r m i n a t i o n                          10/15/26 22:33:20
+
+ S t o r a g e   a l l o c a t i o n   
+
+ Memory required to complete solution   :     272K
+ Additional dynamically allocated memory:    7175K
+                                   Total:    7446K
+
+ T i m i n g   i n f o r m a t i o n
+                        CPU(seconds)   %CPU  Clock(seconds) %Clock
+  ----------------------------------------------------------------
+  Keyword Processing ... 0.0000E+00    0.00     6.2000E-02    0.01
+    KW Reading ......... 0.0000E+00    0.00     2.7000E-02    0.00
+  Initialization ....... 3.0000E+00    0.37     3.0240E+00    0.37
+    Init Proc Phase 1 .. 0.0000E+00    0.00     7.8000E-02    0.01
+    Init Proc Phase 2 .. 0.0000E+00    0.00     1.2000E-02    0.00
+  Element processing ... 7.4500E+02   91.64     7.4684E+02   91.22
+    Solids ............. 1.2600E+02   15.50     1.3370E+02   16.33
+    Shells ............. 2.0000E+00    0.25     3.0630E+00    0.37
+    ISO Shells ......... 0.0000E+00    0.00     1.2000E-02    0.00
+    SPH ................ 6.0300E+02   74.17     5.9826E+02   73.07
+    E Other ............ 1.2000E+01    1.48     1.1436E+01    1.40
+  Binary databases ..... 0.0000E+00    0.00     3.1000E-01    0.04
+  ASCII database ....... 0.0000E+00    0.00     5.2200E-01    0.06
+  Contact algorithm .... 2.9000E+01    3.57     3.1256E+01    3.82
+    Interf. ID         1 1.6000E+01    1.97     1.5003E+01    1.83
+    Interf. ID         2 1.1000E+01    1.35     1.5402E+01    1.88
+  Rigid Bodies ......... 0.0000E+00    0.00     2.8760E+00    0.35
+    Mass Scaling ....... 0.0000E+00    0.00     1.0100E-01    0.01
+    Force gather ....... 0.0000E+00    0.00     1.1270E+00    0.14
+    Kinematic Update ... 0.0000E+00    0.00     7.1400E-01    0.09
+    Update nodes ....... 0.0000E+00    0.00     5.9000E-01    0.07
+  Time step size ....... 0.0000E+00    0.00     3.8500E-01    0.05
+  Group force file ..... 0.0000E+00    0.00     7.1000E-02    0.01
+  Others ............... 1.0000E+00    0.12     7.3600E-01    0.09
+  Misc. 1 .............. 5.0000E+00    0.62     5.8120E+00    0.71
+    Scale Masses ....... 0.0000E+00    0.00     1.8000E-02    0.00
+    Force Constraints .. 0.0000E+00    0.00     5.4000E-02    0.01
+    Force to Accel ..... 3.0000E+00    0.37     3.0820E+00    0.38
+  Misc. 2 .............. 1.1000E+01    1.35     8.3500E+00    1.02
+    Geometry Update .... 9.0000E+00    1.11     7.9870E+00    0.98
+  Misc. 3 .............. 0.0000E+00    0.00     6.2600E-01    0.08
+  Misc. 4 .............. 1.9000E+01    2.34     1.7869E+01    2.18
+    Timestep Init ...... 1.0000E+01    1.23     9.7920E+00    1.20
+    Apply Loads ........ 3.0000E+00    0.37     2.6010E+00    0.32
+    Compute exwork ..... 5.0000E+00    0.62     5.3410E+00    0.65
+  ----------------------------------------------------------------
+  T o t a l s            8.1300E+02  100.00     8.1874E+02  100.00
+
+ Problem time       =    2.0000E-01
+ Problem cycle      =    195569
+ Total CPU time     =       813 seconds (   0 hours 13 minutes 33 seconds)
+ CPU time per zone cycle  =        376.935 nanoseconds
+ Clock time per zone cycle=        379.565 nanoseconds
+
+ Number of CPU's    4
+ NLQ used/max     192/  192
+ Start time   10/15/2026 22:20:11  
+ End time     10/15/2026 22:33:20  
+ Elapsed time     789 seconds for  195569 cycles using  4 SMP threads
+             (      0 hour  13 minutes  9 seconds)
+
+ N o r m a l    t e r m i n a t i o n                          10/15/26 22:33:20
